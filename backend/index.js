@@ -20,7 +20,7 @@ app.get("/getdata", (req, res) => {
       "https://app.ticketmaster.com/discovery/v2/events.json?keyword="
         .concat(keyword, "&radius=")
         .concat(distance, "&unit=miles&geoPoint=")
-        .concat("9q5cs", "&apikey=S3OASSmNyy57pmIOIGWTG78Ht2u8CTsz");
+        .concat("9q5cs", "&apikey=APIKEY");
   } else if (category == "Music") {
     category = "KZFzniwnSyZfZ7v7nJ";
     events_url =
@@ -28,7 +28,7 @@ app.get("/getdata", (req, res) => {
         .concat(keyword, "&segmentId=")
         .concat(category, "&radius=")
         .concat(distance, "&unit=miles&geoPoint=")
-        .concat("9q5cs", "&apikey=S3OASSmNyy57pmIOIGWTG78Ht2u8CTsz");
+        .concat("9q5cs", "&apikey=APIKEY");
   } else if (category == "Sports") {
     category = "KZFzniwnSyZfZ7v7nE";
     events_url =
@@ -36,7 +36,7 @@ app.get("/getdata", (req, res) => {
         .concat(keyword, "&segmentId=")
         .concat(category, "&radius=")
         .concat(distance, "&unit=miles&geoPoint=")
-        .concat("9q5cs", "&apikey=S3OASSmNyy57pmIOIGWTG78Ht2u8CTsz");
+        .concat("9q5cs", "&apikey=APIKEY");
   } else if (category == "Arts & Theatre") {
     category = "KZFzniwnSyZfZ7v7na";
     events_url =
@@ -44,7 +44,7 @@ app.get("/getdata", (req, res) => {
         .concat(keyword, "&segmentId=")
         .concat(category, "&radius=")
         .concat(distance, "&unit=miles&geoPoint=")
-        .concat("9q5cs", "&apikey=S3OASSmNyy57pmIOIGWTG78Ht2u8CTsz");
+        .concat("9q5cs", "&apikey=APIKEY");
   } else if (category == "Film") {
     category = "KZFzniwnSyZfZ7v7nn";
     events_url =
@@ -52,7 +52,7 @@ app.get("/getdata", (req, res) => {
         .concat(keyword, "&segmentId=")
         .concat(category, "&radius=")
         .concat(distance, "&unit=miles&geoPoint=")
-        .concat("9q5cs", "&apikey=S3OASSmNyy57pmIOIGWTG78Ht2u8CTsz");
+        .concat("9q5cs", "&apikey=APIKEY");
   } else if (category == "Miscellaneous") {
     category = "KZFzniwnSyZfZ7v7n1";
     events_url =
@@ -60,7 +60,7 @@ app.get("/getdata", (req, res) => {
         .concat(keyword, "&segmentId=")
         .concat(category, "&radius=")
         .concat(distance, "&unit=miles&geoPoint=")
-        .concat("9q5cs", "&apikey=S3OASSmNyy57pmIOIGWTG78Ht2u8CTsz");
+        .concat("9q5cs", "&apikey=APIKEY");
   }
 
   axios.get(events_url)
@@ -76,7 +76,7 @@ app.get("/getdata", (req, res) => {
 
 app.get("/getEventDetails", (req, res) => {
     let { id } = req.query;
-    var details_url = "https://app.ticketmaster.com/discovery/v2/events/".concat(id, "?apikey=S3OASSmNyy57pmIOIGWTG78Ht2u8CTsz");
+    var details_url = "https://app.ticketmaster.com/discovery/v2/events/".concat(id, "?apikey=APIKEY");
     axios.get(details_url).
         then(function (response) {
         console.log(response.data);
